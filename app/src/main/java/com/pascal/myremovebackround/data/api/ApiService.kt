@@ -12,7 +12,7 @@ interface ApiService {
 
     @Multipart
     @Headers("Accept: application/json",
-        "X-Api-Key: G63i2yRx3Vr8i7PnhcEzoNQf"
+        "X-Api-Key: REPLACE_YOU_TOKEN"
     )
     @POST("removebg")
     fun getBg(@Part userReq: MultipartBody.Part): Single<ResponseBg>
