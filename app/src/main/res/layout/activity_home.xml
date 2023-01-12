@@ -16,7 +16,7 @@
         app:cardElevation="8dp"
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
-        app:layout_constraintBottom_toTopOf="@+id/btn_upload"
+        app:layout_constraintBottom_toTopOf="@+id/checkbox"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="24dp">
 
@@ -50,6 +50,26 @@
                 app:tint="@color/purple_500" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:text="I have read and agree"
+        app:layout_constraintBottom_toTopOf="@+id/btn_upload"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/btn_privacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="Privacy Police"
+        android:textColor="#2196F3"
+        app:layout_constraintBottom_toBottomOf="@+id/checkbox"
+        app:layout_constraintStart_toEndOf="@+id/checkbox"
+        app:layout_constraintTop_toTopOf="@+id/checkbox" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_upload"

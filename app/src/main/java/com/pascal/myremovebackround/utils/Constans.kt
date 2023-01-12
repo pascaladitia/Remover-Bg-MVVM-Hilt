@@ -15,6 +15,7 @@ class Constans {
 
     companion object {
         const val BASE_URL = "https://api.remove.bg/v1.0/"
+        const val WEB_VIEW = "https://pages.flycricket.io/remove-backround-ima/privacy.html"
     }
 }
 

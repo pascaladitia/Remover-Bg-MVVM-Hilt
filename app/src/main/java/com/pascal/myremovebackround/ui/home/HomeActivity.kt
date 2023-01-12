@@ -2,6 +2,7 @@ package com.pascal.myremovebackround.ui.home
 
 import android.app.Activity
 import android.app.Dialog
+import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.os.Environment
@@ -74,7 +75,9 @@ class HomeActivity : AppCompatActivity() {
         })
 
         binding.btnUpload.setOnClickListener {
-            getImage()
+            if (binding.checkbox.isChecked) {
+                getImage()
+            } else showToast("Please read and agree privacy police")
         }
 
         binding.card.setOnClickListener {
@@ -92,6 +95,10 @@ class HomeActivity : AppCompatActivity() {
                 showToast("upload your image")
             }
          true
+        }
+
+        binding.btnPrivacy.setOnClickListener {
+            startActivity(Intent(this, PrivacyActivity::class.java))
         }
     }
 
